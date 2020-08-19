@@ -25,6 +25,7 @@ pipeline {
                     . ~/.bash_profile
             
                     export os_type=`uname`
+                    pwd
                     cd ${WORKSPACE}/web/bin/docker
                     if [[ "${os_type}" == "Darwin" ]]; then
                         sed -i "" "s/mysql_ip/${mysql_docker_ip}/g" application-prod.yml
